@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GameFirstDemo
 {
-    class ChristmassCampaign : ICampaigns
+    class ChristmassCampaignDal : ICampaigns
     {
         public void Add()
         {

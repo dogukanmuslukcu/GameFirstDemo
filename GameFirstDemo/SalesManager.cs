@@ -6,16 +6,25 @@ namespace GameFirstDemo
 {
     class SalesManager
     {
-        public void SellCoin(Players player,List<ICampaigns> campaigns )
+        public void SellCoin(Players player, List<ICampaigns> campaigns)
         {
-            foreach (var item in campaigns)
+            if (player.PlayerExperience >= 5000)
             {
-                item.Add();
+                Console.WriteLine("Coin satın alınmıştır"); 
+                
+                foreach (var item in campaigns)
+                {
+                    item.Add();
+                }
+
             }
-            if (player.PlayerExperience > 5000 && campaigns.Count>=1) 
+            else
             {
-                Console.WriteLine("Coin satın alınmıştır"+campaigns+" 'in "+"indirimi uygulanmıştır");
+                Console.WriteLine("Tecrübe puanınız yetersizdir.");
+
             }
+
+
         }
     }
 }

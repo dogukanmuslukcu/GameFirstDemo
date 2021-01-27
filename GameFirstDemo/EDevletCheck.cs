@@ -10,10 +10,11 @@ namespace GameFirstDemo
         string userWriteLastName;
         string userWriteTcNum;
         string userWriteBirthDate;
-        public void check(Players players)
+        public void Check(Players player, string userWriteName, string userWriteLastName, string userWriteTcNum)
         {
-            if (userWriteBirthDate == players.BirthdayDate && userWriteLastName == players.LastName && userWriteTcNum == players.TCNumber)
+            if (userWriteBirthDate == player.BirthdayDate && userWriteLastName == player.LastName && userWriteTcNum == player.TCNumber)
             {
+                Console.WriteLine(player.FirstName +" Hoşgeldiniz.");
                 Console.WriteLine("Hesabınıza başarıyla yönlerndiriliyorsunuz.");
             }
             else
