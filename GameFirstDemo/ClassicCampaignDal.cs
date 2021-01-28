@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GameFirstDemo
 {
-    class ClassicCampaignDal : ICampaigns
+    class ClassicCampaignDal : ICampaignsService
     {
         public void Add()
         {

@@ -4,10 +4,10 @@ using System.Text;
 
 namespace GameFirstDemo
 {
-    interface IGameDal
+    interface ICampaignsService
     {
         void Add();
-        void Remove();
         void Update();
+        void Remove();
     }
 }

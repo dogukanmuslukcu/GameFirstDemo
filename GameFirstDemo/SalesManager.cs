@@ -6,7 +6,7 @@ namespace GameFirstDemo
 {
     class SalesManager
     {
-        public void SellCoin(Players player, List<ICampaigns> campaigns)
+        public void SellCoin(Player player, List<ICampaignsService> campaigns)
         {
             if (player.PlayerExperience >= 5000)
             {

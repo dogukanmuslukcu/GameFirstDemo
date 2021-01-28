@@ -4,10 +4,9 @@ using System.Text;
 
 namespace GameFirstDemo
 {
-    interface ICampaigns
+    interface ICheckService
     {
-        void Add();
-        void Update();
-        void Remove();
+        bool Check(Player player);
+
     }
 }

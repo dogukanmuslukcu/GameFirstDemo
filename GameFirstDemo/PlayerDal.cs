@@ -4,19 +4,32 @@ using System.Text;
 
 namespace GameFirstDemo
 {
-    class PlayerDal : IGameDal
+    class PlayerDal : IGameService
     {
-        public void Add()
+        ICheckService _checkService;
+        public PlayerDal(ICheckService checkService)
         {
-            Console.WriteLine("Player added.");
+            _checkService = checkService;
+        }
+        public void Add(Player player)
+        {
+            if (_checkService.Check(player))
+            {
+                Console.WriteLine("Player added.");
+            }
+            else
+            {
+                Console.WriteLine("Player  wasn't added");
+            }
+
         }
 
-        public void Remove()
+        public void Remove(Player player)
         {
             Console.WriteLine("Player Removed.");
         }
 
-        public void Update()
+        public void Update(Player player)
         {
             Console.WriteLine("Player Updated.");
         }
